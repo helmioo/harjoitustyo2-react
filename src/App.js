@@ -5,8 +5,8 @@ const URL= 'https://www.boredapi.com/api/activity'
 
 function App() {
 
-  const [activity, setActivity] = useState(0)
-  const [participants, setParticipants] = useState(0)
+  const [activity, setActivity] = useState('')
+  const [participants, setParticipants] = useState(1)
   const [result, setResult] = useState('')
 
   async function search(e) {
