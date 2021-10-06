@@ -13,18 +13,23 @@ function App() {
     e.preventDefault()
 
     try {
+      setResult('Looking for an activity, please wait.')
       const address = URL + '?type=' + activity + '&participants=' + participants
       const response = await fetch(address)
   
       if (response.ok) {
       const json = await response.json()
-      console.log(json.activity)
+      console.log(json)
       setResult(json.activity)
       }
       else {
+        setResult('')
+        console.log(alert);
         alert('Error retrieving activity.')
       }
     } catch (err) {
+      console.log(setResult);
+      setResult('')
       alert(err)
     }
   }
